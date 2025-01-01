@@ -1,14 +1,17 @@
 {
-  "name": "lws-json-server-todos",
-  "description": "Example in memory todos api with json-server by Learn with Sumit",
+  "name": "server",
   "version": "1.0.0",
+  "description": "server for my vanguard elegance",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json --no-cors true  --port 9000"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
+  "author": "mahafuz",
+  "license": "ISC",
   "dependencies": {
-    "json-server": "^0.17.4"
-  },
-  "keywords": [],
-  "author": "Sumit Saha, Learn with Sumit"
+    "express": "^4.21.2",
+    "mongoose": "^8.9.2",
+    "nodemon": "^3.1.9"
+  }
 }

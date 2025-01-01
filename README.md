@@ -1,1 +1,0 @@
-# Vanguard elegance dummy server
