@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
 const orderSchema = require("../schemas/orderSchema");
-const Order = new mongoose.model("Order", orderSchema);
+const Order = new mongoose.model("Oder", orderSchema);
 
 // GET ALL ORDER DATA
 router.get("/", async (req, res) => {
