@@ -4,12 +4,16 @@ const productHandler = require("./routehandler/productHandler");
 const costHandler = require("./routehandler/costHandler");
 const transportHandler = require("./routehandler/trasportHandler");
 const oderHandler = require("./routehandler/orderHandler");
+const cors = require('cors');
 
 const app = express();
 app.use(express.json());
 
-// database connection with mongoose
 
+// cors using
+app.use(cors());
+
+// database connection with mongoose
 mongoose
   .connect(
     "mongodb+srv://muntasiraahmed3:ezGrNVTsKyqTQFwj@cluster0.o3rim.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"

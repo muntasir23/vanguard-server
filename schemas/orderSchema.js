@@ -43,6 +43,9 @@ const orderSchema = mongoose.Schema({
     type: String,
     enum: ["Person", "Company"],
   },
+  status:{
+    enum: ["Pending", "Paid"],
+  }
 });
 
 module.exports = orderSchema;

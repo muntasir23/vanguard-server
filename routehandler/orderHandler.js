@@ -92,7 +92,26 @@ router.post("/all", async (req, res) => {
 });
 
 // UPDATE A ORDER
-router.put("/:id", async (req, res) => {});
+router.put("/:id", async (req, res) => {
+  try {
+    await Order.updateOne(
+      { _id: req.params.id },
+      {
+        $set: {
+          status: req.body.status,
+          soldBy: req.body.soldBy,
+        },
+      }
+    );
+    res.status(200).json({
+      message: "Oder was updated successfully",
+    });
+  } catch (err) {
+    res.status(500).json({
+      error: err,
+    });
+  }
+});
 
 // DELETE A ORDER
 router.delete("/:id", async (req, res) => {
